@@ -89,4 +89,4 @@ m <- n-1
 tidy <- tidy[,c(1,n,3:m)]
 
 #Export tidy data
-write.table(tidy, './tidyData.txt', row.names=FALSE, sep=',')
+write.table(tidy, './tidyData.txt', row.names=FALSE, sep='/t')
