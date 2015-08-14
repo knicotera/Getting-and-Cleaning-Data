@@ -32,12 +32,12 @@ colnames(subjectTest) <- "subjectId"
 test <- cbind(yTest, subjectTest, xTest) #merge all test data
  
 data <- rbind(training, test) #combine training data and test data
-colNames  = colnames(data); #store all column names
+colNames <- colnames(data); #store all column names
 
 ## 2. Extract only the measurements on the mean and standard deviation 
 ## for each measurement. 
 
-extract = (grepl("activity..",colNames) | grepl("subject..",colNames) 
+extract <- (grepl("activity..",colNames) | grepl("subject..",colNames) 
            | grepl("-mean..",colNames) & !grepl("-meanFreq..",colNames) 
            & !grepl("mean..-",colNames) | grepl("-std..",colNames) 
            & !grepl("-std()..-",colNames))
